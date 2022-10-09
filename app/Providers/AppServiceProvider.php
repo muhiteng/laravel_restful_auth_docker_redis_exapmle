@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Routing\ResponseFactory;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+         // JsonResource::withoutWrapping();
+         ResponseFactory::macro('api', function ($data = null, $error = 0, $message = '') {
+            return response()->json([
+                'data' => $data,
+                'error' => $error, //1 or 0
+                'message' => $message,
+            ]);
+        });
     }
 }
