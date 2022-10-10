@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Routing\ResponseFactory;
 use Illuminate\Support\ServiceProvider;
 
@@ -24,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-         // JsonResource::withoutWrapping();
+          JsonResource::withoutWrapping();
          ResponseFactory::macro('api', function ($data = null, $error = 0, $message = '') {
             return response()->json([
                 'data' => $data,

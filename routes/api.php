@@ -44,3 +44,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('users/{id}/links', [Linkcontroller::class, 'index']);
     Route::get('orders', [OrderController::class, 'index']);
 });
+
+
+Route::get('product/frontend', [ProductController::class, 'frontend']);
+Route::get('product/backend_without_cache', [ProductController::class, 'backend_without_cache']);
+Route::get('product/backend', [ProductController::class, 'backend']);
