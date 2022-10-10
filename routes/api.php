@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\LogoutController;
 use App\Http\Controllers\Api\Auth\ProfileController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UsersController;
 
 //   /api/admin/
@@ -31,4 +32,11 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     Route::get('users', [UsersController::class, 'get_users']);
     Route::get('admins', [UsersController::class, 'get_admins']);
+    //(get products) get localhost:8000/api/products
+    //(create product )post localhost:8000/api/products
+    //(get product by id) get localhost:8000/api/products/2
+    //(update product ) put localhost:8000/api/products/2
+    //(delete product ) delete localhost:8000/api/products/2
+
+    Route::apiResource('products', ProductController::class);
 });
