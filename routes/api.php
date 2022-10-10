@@ -6,6 +6,8 @@ use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\LogoutController;
 use App\Http\Controllers\Api\Auth\ProfileController;
+use App\Http\Controllers\Linkcontroller;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UsersController;
 
@@ -39,4 +41,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
     //(delete product ) delete localhost:8000/api/products/2
 
     Route::apiResource('products', ProductController::class);
+    Route::get('users/{id}/links', [Linkcontroller::class, 'index']);
+    Route::get('orders', [OrderController::class, 'index']);
 });

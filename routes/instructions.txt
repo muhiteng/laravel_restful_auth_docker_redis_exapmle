@@ -8,5 +8,26 @@ php artisan make:migration create_products_table
 php artisan make:model Product 
 php artisan make:controller ProductController --api --model=Product
 php artisan make:factory ProductFactory
-php artisan make:seeder ProductSeder
+php artisan make:seeder ProductSeeder
 php artisan db:seed --class=ProductSeeder
+//=================================
+php artisan make:migration create_links_table
+php artisan make:migration create_link_products_table
+php artisan make:model Link
+php artisan make:model LinkProduct
+php artisan make:controller Linkcontroller 
+php artisan make:resource LinkResource
+php artisan make:factory LinkFactory
+php artisan make:seeder LinkSedeer
+php artisan db:seed --class=LinkSedeer
+//=====================================
+php artisan make:migration create_orders_table
+php artisan make:migration create_order_items_table
+php artisan make:model Order
+php artisan make:model OrderItem
+ php artisan make:controller OrderController
+ php artisan make:factory OrderFactory
+ php artisan make:factory OrderItemFactory
+ php artisan make:seeder OrderSeeder
+php artisan make:resource OrderResource
+php artisan make:resource OrderItemResource
