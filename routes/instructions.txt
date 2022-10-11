@@ -1,4 +1,8 @@
 composer require predis/predis
+//stripe
+composer require cartalyst/stripe
+https://cartalyst.com/manual/stripe/2.0#installation
+"cartalyst/stripe": "~2.0"
 //====================================
 php artisan migrate
 php artisan db:seed
