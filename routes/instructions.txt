@@ -33,3 +33,7 @@ php artisan make:model OrderItem
  php artisan make:seeder OrderSeeder
 php artisan make:resource OrderResource
 php artisan make:resource OrderItemResource
+//==============================
+php artisan make:controller statsController
+//===============================
+php artisan make:command UpdateRankingCommand

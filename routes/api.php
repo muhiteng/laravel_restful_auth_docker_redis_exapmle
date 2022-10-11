@@ -9,6 +9,7 @@ use App\Http\Controllers\Api\Auth\ProfileController;
 use App\Http\Controllers\Linkcontroller;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\statsController;
 use App\Http\Controllers\UsersController;
 
 //   /api/admin/
@@ -49,3 +50,5 @@ Route::middleware(['auth:sanctum'])->group(function () {
 Route::get('product/frontend', [ProductController::class, 'frontend']);
 Route::get('product/backend_without_cache', [ProductController::class, 'backend_without_cache']);
 Route::get('product/backend', [ProductController::class, 'backend']);
+Route::get('stats', [statsController::class, 'index']);
+Route::get('rankings', [StatsController::class, 'rankings']);
