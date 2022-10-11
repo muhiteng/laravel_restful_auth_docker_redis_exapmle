@@ -1,8 +1,5 @@
 composer require predis/predis
-//stripe
-composer require cartalyst/stripe
-https://cartalyst.com/manual/stripe/2.0#installation
-"cartalyst/stripe": "~2.0"
+
 //====================================
 php artisan migrate
 php artisan db:seed
@@ -48,3 +45,8 @@ php artisan make:event OrderCompletedEvent
 php artisan make:listener ProductUpdatedListener
 php artisan make:listener NotifyAdminListener
 php artisan make:listener NotifyAmbassadorListener
+//=================stripe==============
+composer require cartalyst/stripe
+https://cartalyst.com/manual/stripe/2.0#installation
+"cartalyst/stripe": "~2.0"
+//============ mailhog =================
