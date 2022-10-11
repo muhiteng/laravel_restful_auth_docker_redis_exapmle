@@ -37,3 +37,10 @@ php artisan make:resource OrderItemResource
 php artisan make:controller statsController
 //===============================
 php artisan make:command UpdateRankingCommand
+//=============================
+php artisan make:event ProductUpdatedEvent
+php artisan make:event OrderCompletedEvent
+//=================================
+php artisan make:listener ProductUpdatedListener
+php artisan make:listener NotifyAdminListener
+php artisan make:listener NotifyAmbassadorListener
